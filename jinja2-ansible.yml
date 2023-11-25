@@ -1,0 +1,4 @@
+---
+- hosts: routers
+  roles:
+    - role: jinja2-ansible
