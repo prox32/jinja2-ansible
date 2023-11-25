@@ -1,6 +1,6 @@
 #Configure OSPF for infra links
 router ospf 100
-{% for network in networks_ospf %}
+{% for network in networks_ospf -%}
 network {{ network }} area 0
 {% endfor %}
   
