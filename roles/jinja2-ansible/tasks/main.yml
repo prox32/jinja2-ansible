@@ -4,3 +4,6 @@
 
 - name: OSPF configuration
   import_tasks: ospf_config.yml
+
+- name: BGP configuration
+  import_tasks: bgp_config.yml

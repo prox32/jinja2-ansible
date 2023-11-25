@@ -1,0 +1,6 @@
+#Configure OSPF for infra links
+router bgp 64950
+redistribute connected
+{% for network in networks_bgp -%}
+network {{ network }} remote-as 64950
+{% endfor %}
