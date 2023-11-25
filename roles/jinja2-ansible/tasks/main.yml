@@ -1,4 +1,3 @@
 ---
 - name: Interface configuration
   import_tasks: interface_config.yml
-
