@@ -1,6 +1,6 @@
-#Configure OSPF for infra links
+#Configure BGP for infra links
 router bgp 64950
 redistribute connected
-{% for network in networks_bgp -%}
-network {{ network }} remote-as 64950
+{% for neighbor in neighbors_bgp -%}
+neighbor {{ neighbor }} remote-as 64950
 {% endfor %}
