@@ -1,0 +1,35 @@
+conf t
+no ip domain lookup
+ip domain name skynet
+hostname somerouter
+!
+line con 0
+logging synchronous
+no login
+!
+username cisco password cisco
+username cisco priv 15
+enable password cisco
+service password-encryption
+!
+vrf definition mgmt
+address-family ipv4
+!
+interface g0/0
+vrf forwarding mgmt
+ip add 10.1.1.4 255.255.255.0
+no shut
+!
+ip route vrf mgmt 0.0.0.0 0.0.0.0 10.1.1.1
+!
+line vty 0 4
+login local
+logging synchronous
+transport input ssh
+!
+crypto key generate rsa modulus 2048
+!
+end
+wr
+
+Configure hostname manually post config.
