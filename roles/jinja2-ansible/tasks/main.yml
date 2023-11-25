@@ -1,3 +1,6 @@
 ---
 - name: Interface configuration
   import_tasks: interface_config.yml
+
+- name: OSPF configuration
+  import_tasks: ospf_config.yml

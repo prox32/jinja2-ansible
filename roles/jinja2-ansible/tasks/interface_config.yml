@@ -1,5 +1,5 @@
 ---
 - name: Interface configuration
   ios_config:
-    src: interface-config.j2
+    src: interface_config.j2
     match: none
